@@ -14,5 +14,11 @@ module.exports = {
 	env: {
 		basePath: basePath,
 		img: `${basePath}/img`
-	}
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 };

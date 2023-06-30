@@ -27,6 +27,10 @@ export const SectionWrapper = styled.section`
 export const Info = styled.div`
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 575px) {
+		display: block;
+	}
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -36,6 +40,10 @@ export const DescriptionWrapper = styled.div`
 		color: var(--muted);
 		margin-bottom: 50px;
 	}
+
+	@media (max-width: 575px) {
+		width: 100%;
+	}
 `;
 
 export const ImageWrapper = styled.div`
@@ -44,10 +52,24 @@ export const ImageWrapper = styled.div`
 	justify-content: center;
 	width: 60%;
 
+	@media (max-width: 575px) {
+		width: 100%;
+	}
+
 	img {
 		position: absolute;
 		top: -180px;
 		width: 40%;
 		height: auto;
+
+		@media (max-width: 1024px) {
+			top: 0px;
+			width: 50%;
+		}
+		@media (max-width: 575px) {
+			position: relative;
+			width: 60%;
+			top: 0;
+		}
 	}
 `;

@@ -10,6 +10,8 @@ export const SectionWrapper = styled.section`
 	justify-content: center;
 	align-items: center;
 
+	margin-top: 100px;
+
 	& > div {
 		width: 100%;
 		max-width: 1920px;

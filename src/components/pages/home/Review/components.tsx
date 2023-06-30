@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Title from 'components/shared/Title';
 
 export const SectionWrapper = styled.section`
 	width: 100%;
@@ -26,6 +27,19 @@ export const SectionWrapper = styled.section`
 
 export const Info = styled.div`
 	display: flex;
+
+	@media (max-width: 575px) {
+		flex-direction: column;
+		justify-content: reverse;
+	}
+`;
+
+export const CustomTitle = styled(Title)`
+	width: 80%;
+
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -36,6 +50,14 @@ export const DescriptionWrapper = styled.div`
 		text-align: right;
 		margin-bottom: 50px;
 	}
+
+	@media (max-width: 575px) {
+		width: 100%;
+
+		p {
+			text-align: left;
+		}
+	}
 `;
 
 export const ImageWrapper = styled.div`
@@ -44,10 +66,27 @@ export const ImageWrapper = styled.div`
 	justify-content: center;
 	width: 40%;
 
+	@media (max-width: 1024px) {
+		width: 60%;
+	}
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+
 	img {
 		position: absolute;
 		top: -180px;
 		width: 60%;
 		height: auto;
+
+		@media (max-width: 1024px) {
+			top: -50px;
+			width: 50%;
+		}
+		@media (max-width: 575px) {
+			position: relative;
+			width: 60%;
+			top: 0;
+		}
 	}
 `;

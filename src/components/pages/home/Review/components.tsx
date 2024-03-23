@@ -30,11 +30,10 @@ export const Info = styled.div`
 
 	@media (max-width: 575px) {
 		flex-direction: column;
-		justify-content: reverse;
 	}
 `;
 
-export const CustomTitle = styled(Title)`
+export const TitleWrapper = styled.div`
 	width: 80%;
 
 	@media (max-width: 1024px) {
@@ -45,8 +44,8 @@ export const CustomTitle = styled(Title)`
 export const DescriptionWrapper = styled.div`
 	width: 40%;
 
-	p {
-		color: var(--muted);
+	& > p {
+		color: var(--muted); 
 		text-align: right;
 		margin-bottom: 50px;
 	}
